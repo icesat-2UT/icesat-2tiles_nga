@@ -17,9 +17,9 @@ To run locally, the user must change the example_local.inp file to reflect their
 The code can be executed by navigating to the app/ directory and running:
 > python local_tiling.py
 > 
-The code will take global variables from the example_local.inp and begin processing ATL03 and ATL08 files into the specified tile size. 
+The code will take input variables from the example_local.inp and begin processing ATL03 and ATL08 files into the specified tile size. 
 
-Notes on the verbose output:
+#### Notes on the verbose output:
 If the .h5 data is successfully processed into tiles, the script outputs: 
 >Success on [.h5 file] beam [beam name] index: [index of file in directory]
 

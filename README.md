@@ -1,7 +1,7 @@
 # ICESat-2 Tiles
 ## A Convenient Processed Format for ICESat-2 Data
 
-This module provides the framework for ingesting ATL03 and ATL08 data into a tiled format in compressed LAZ format. It assumes local access to ATL03 and ATL08 data products from [ICESat-2](https://icesat-2.gsfc.nasa.gov/).
+This module provides the framework for ingesting ATL03 and ATL08 data into a tiled format in compressed LAZ format. It assumes local access to ATL03 and ATL08 data products from [ICESat-2](https://icesat-2.gsfc.nasa.gov/). The code is built off the sourcecode for [PhoReal](https://github.com/icesat-2UT/PhoREAL).
 
 ### Getting Started
 

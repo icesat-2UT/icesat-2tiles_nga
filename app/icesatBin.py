@@ -337,55 +337,6 @@ def get_specific_key(data, field):
             specific_field = 'segment_id_mid'
 
     return specific_field
-    
-
-# def get_multibin_df(atl03, atl08, truth, unit, res, agg_list):
-#     if atl03:
-#         key_df = create_key_df(atl03.df, unit, res)
-#         target_key, include = get_target_keys(key_df, atl03.df, unit)
-#         df = atl03.df.reset_index(drop = True)
-#         df = pd.concat([df,pd.DataFrame(target_key,columns=['bin_id'])],axis=1)
-#         df = pd.concat([df,pd.DataFrame(include,columns=['include'])],axis=1)
-#         df = df[df.include == 1]
-#         in_agg_list = []
-#         for agg in agg_list:
-#             if agg.split(',')[0] == 'atl03':
-#                 in_agg_list.append(agg)
-#         df_bin = agg_keys(key_df, df, in_agg_list, key = 'bin_id')
-#     if atl08:
-#         atl08_unit = get_specific_key('atl08', unit)
-#         if atl08_unit.lower() == 'segment_id_mid':
-#             seg_mid = get_ATL08_seg_mid(atl08.df)
-#             atl08.df.reset_index(drop = True)
-#             atl08.df = pd.concat([atl08.df,pd.DataFrame(seg_mid,
-#                                         columns=['segment_id_mid'])],axis=1)            
-#         target_key, include = get_target_keys(key_df, atl08.df, atl08_unit)
-#         df = atl08.df.reset_index(drop = True)
-#         df = pd.concat([df,pd.DataFrame(target_key,columns=['bin_id'])],axis=1)
-#         df = pd.concat([df,pd.DataFrame(include,columns=['include'])],axis=1)
-#         df = df[df.include == 1]
-#         in_agg_list = []
-#         for agg in agg_list:
-#             if ((agg.split(',')[0] == 'atl08') and \
-#                 (agg.split(',')[1] == 'all') and (res <= 5)):
-#                 res = 5
-#                 df_bin = pd.merge(key_df, df, on="segment_id_mid",how='left')
-#             elif agg.split(',')[0] == 'atl08':
-#                 in_agg_list.append(agg)
-#                 df_bin = agg_keys(key_df, df, in_agg_list, key = 'bin_id')
-#     if truth:
-#         target_key, include = get_target_keys(key_df, atl08.df, unit)
-#         df = atl03.df.reset_index(drop = True)
-#         df = pd.concat([df,pd.DataFrame(target_key,columns=['bin_id'])],axis=1)
-#         df = pd.concat([df,pd.DataFrame(include,columns=['include'])],axis=1)
-#         df = df[df.include == 1]
-#         in_agg_list = []
-#         for agg in agg_list:
-#             if agg.split(',')[0] == 'truth':
-#                 in_agg_list.append(agg)
-#         df_bin = agg_keys(key_df, df, in_agg_list, key = 'bin_id')        
-    
-#     return df_bin
 
 def interpolate_domain(atl08_at, atl08_domain, key_df_at):
     intep_func = interpolate.interp1d(atl08_at, atl08_domain, kind='linear', 

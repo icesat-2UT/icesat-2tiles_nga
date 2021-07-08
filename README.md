@@ -8,7 +8,8 @@ This module provides the framework for ingesting ATL03 and ATL08 data into a til
 A working environment can be found in /envs/requirements.txt, though there are several packages that may need to be installed manually. Even after installing the requirements.txt, we ***strongly recommend*** that you manually install pylas with the command:
 > pip install pylas[lazrs]
 > 
-This ensures the correct pylas version and LAZ-compression backend is built. Most of the compression error we run into can be attributed to a build issue with pylas.
+This ensures the correct pylas version and LAZ-compression backend is built. Most of the compression errors we run into can be attributed to a build issue with pylas.
+We also recommend installing python-geohash with care. It can have compatibility issues with Microsoft Visual C++.
 
 ### Running the code 
 To run locally, the user must change the example_local.inp file to reflect their internal directory structure.

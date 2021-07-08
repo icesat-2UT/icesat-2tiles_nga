@@ -1,0 +1,12 @@
+# input file for local_tiling.py
+dir_03 = 'path/to/local/atl03/files/'
+dir_08 ='path/to/local/atl08/files/'
+dir_out = 'path/to/output/directory/'
+shapefilenamepath ='path/to/output/dierctory/grid_file_name.shp'
+# makes a global grid with 1deg x 1deg tiles
+xmin = -180
+xmax = 180
+ymin = -90
+ymax = 90
+gridHeight = 1
+gridWidth = 1

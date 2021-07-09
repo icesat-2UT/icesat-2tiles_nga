@@ -1,0 +1,13 @@
+# This is an input file designed to work with process_mega_tiles.py
+
+# Path to ICESat-2 Mega Tiles
+inpDir = '\\\\bigtex\\laserpewpew\\data\\release\\004\\ATL03_MegaTiles\\sandbox_20210705'
+
+# Set Lat/Lon min/max bounds
+latMin = 79
+latMax = 80
+lonMin = -22
+lonMax = -23
+
+# Set cycle(s) to use
+cycle = ['06'] # EX: ['01'] or ['01','02','05'] or 'all'

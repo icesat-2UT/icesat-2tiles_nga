@@ -9,7 +9,8 @@ A working environment can be found in /envs/requirements.txt, though there are s
 > pip install pylas[lazrs]
 > 
 This ensures the correct pylas version and LAZ-compression backend is built. Most of the compression errors we run into can be attributed to a build issue with pylas.
-We also recommend installing python-geohash with care. It can have compatibility issues with Microsoft Visual C++.
+We also recommend installing python-geohash with care. It can have compatibility issues with Microsoft Visual C++. 
+Presently, we recommend running the tile-creating program in a separate python environment than the tile-viewer. Some of the geospatial software dependancies are fragile. 
 
 ### Running the code 
 To run locally, the user must change the example_local.inp file to reflect their internal directory structure.
